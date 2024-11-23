@@ -9,6 +9,7 @@ import com.dowell.testtaskproductlist.feature_product.domain.use_case.UpdateProd
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toPersistentList
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -45,7 +46,7 @@ class ProductListViewModel @Inject constructor(
     }
 
     private fun increaseQuantity(productId: Int) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             state.value.products.firstOrNull { it.id == productId }?.let { product ->
                 val newQuantity = product.quantity + 1
                 updateProductQuantityUseCase(productId, newQuantity)
@@ -54,7 +55,7 @@ class ProductListViewModel @Inject constructor(
     }
 
     private fun decreaseQuantity(productId: Int) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             state.value.products.firstOrNull { it.id == productId }?.let { product ->
                 val newQuantity = maxOf(0, product.quantity - 1)
                 updateProductQuantityUseCase(productId, newQuantity)

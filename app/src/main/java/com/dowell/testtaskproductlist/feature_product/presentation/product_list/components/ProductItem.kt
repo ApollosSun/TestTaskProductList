@@ -32,12 +32,13 @@ import com.dowell.testtaskproductlist.feature_product.presentation.product_list.
 
 @Composable
 fun ProductItem(
+    modifier: Modifier = Modifier,
     item: Product,
     handleAction: (ProductListAction) -> Unit
 ) {
     Card(
         shape = RoundedCornerShape(8.dp),
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(8.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
