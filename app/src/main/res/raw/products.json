@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Mouse",
+    "description": "A high-precision wireless mouse with adjustable DPI settings.",
+    "price": 19.99,
+    "quantity": 10,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdzb7BpJnnru0U6I__ydzwL5owZDgFb2WtIQ&s"
+  },
+  {
+    "id": 2,
+    "name": "Bluetooth Headphones",
+    "description": "Noise-cancelling over-ear Bluetooth headphones with 30 hours of battery life.",
+    "price": 49.99,
+    "quantity": 7,
+    "imageUrl": "https://www.shutterstock.com/image-vector/airpods-wireless-bluetooth-headphones-vector-260nw-1612869421.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Gaming Keyboard",
+    "description": "RGB mechanical gaming keyboard with customizable macros.",
+    "price": 69.99,
+    "quantity": 5,
+    "imageUrl": "https://img.freepik.com/premium-vector/gaming-keyboard-pc-vector-monochrome-object-design-element-isolated-white-background_258353-871.jpg"
+  },
+  {
+    "id": 4,
+    "name": "4K Monitor",
+    "description": "A 27-inch 4K UHD monitor with HDR support and low blue light technology.",
+    "price": 299.99,
+    "quantity": 3,
+    "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/010/405/418/small/glossy-minimal-television-icon-illustration-tv-monitor-black-technology-screen-free-vector.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Portable SSD",
+    "description": "1TB portable SSD with USB-C connectivity and ultra-fast transfer speeds.",
+    "price": 99.99,
+    "quantity": 8,
+    "imageUrl": "https://img.freepik.com/premium-vector/external-ssd-drive-line-icon_116137-9670.jpg"
+  }
+]
