@@ -11,6 +11,7 @@ import dagger.assisted.AssistedInject
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @HiltViewModel(assistedFactory = ProductDetailsViewModel.Factory::class)
 class ProductDetailsViewModel @AssistedInject constructor(
@@ -28,8 +29,10 @@ class ProductDetailsViewModel @AssistedInject constructor(
     private fun getProductById() {
         viewModelScope.launch(Dispatchers.IO) {
             getProductByIdUseCase(productId)?.let { product ->
-                _state.value =
-                    state.value?.copy(product = product) ?: ProductDetailsState(product = product)
+                withContext(Dispatchers.Main) {
+                    _state.value =
+                        state.value?.copy(product = product) ?: ProductDetailsState(product = product)
+                }
             }
         }
     }
